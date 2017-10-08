@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/chelseymarie6/LIRI-Bot/issues"
   },
-  "homepage": "https://github.com/chelseymarie6/LIRI-Bot#readme"
+  "homepage": "https://github.com/chelseymarie6/LIRI-Bot#readme",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
 }

@@ -8,9 +8,10 @@
 
 //    * `do-what-it-says`
 
-var keys = require("./keys.js");
+var keysFile = require("./keys.js");
 var twitterObject = require(keys.twitterKeys);
-var spotifyObject = require(keys.spotifyKeys);
+var spotifyObject = require(keys.spotifyKeys); 
+//the above will be require("node-spotify-api");
 
 var tweets
 
