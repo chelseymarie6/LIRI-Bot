@@ -8,8 +8,8 @@ var twitterKeys = {
 };
 
 var spotifyKeys = {
-    client_ID: 'a888955e9bd64e43bf3b966436fd436e',
-    client_Secret: '4b703da54a3a42dcae0692ff271b9f4f'
+    id: 'a888955e9bd64e43bf3b966436fd436e',
+    secret: '4b703da54a3a42dcae0692ff271b9f4f'
 };
 
 var omdbKey = {

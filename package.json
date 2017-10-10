@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/chelseymarie6/LIRI-Bot#readme",
   "dependencies": {
+    "node-spotify-api": "^1.0.7",
     "twitter": "^1.7.1"
   }
 }
