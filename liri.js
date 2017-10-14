@@ -14,16 +14,11 @@ var spotifyClient = new Spotify(keys.spotifyKeys);
 var argOne = process.argv[2];
 var argTwo = process.argv[3];
 
-//PARAMETER OBJECTS
+//TWITTER PARAMETER OBJECT
 var parameters = {
     twitterParam: {
         screen_name: "CoderChelsaroo"
     },
-    spotifyParam: {
-        type: "track",
-        query: argTwo,
-        limit: 1
-    }
 }
 
 //OMDB URL's
@@ -42,10 +37,19 @@ else if (argOne === "movie-this"){
 }
 else if (argOne === "do-what-it-says"){
     fs.readFile("random.txt","UTF-8", function(err, data) {
-        grabSpotify();
+        if (err){
+            return console.log(err);
+        }
+        var cmdOne = data.split(",")[0];
+        var cmdTwo = data.split(",")[1];
+
+        if (cmdOne === "spotify-this-song"){
+            grabSpotify(cmdTwo);
+        }
      });
  }
 
+ //SPOTIFY
 function grabSpotify() {
     var queryInput = "Never Gonna Give You Up";
     if (argTwo !== undefined) {
@@ -110,15 +114,5 @@ function grabMovie(){
                 } 
             }); 
         }
-
-//RANDOM
-function getRandom(){
-    fs.readFile("random.txt","UTF-8", function(error, data) {
-        if(error) {
-            console.log("Something went wrong" + error);
-          }
-          grabTweets();
-      });
-};
 }
 
