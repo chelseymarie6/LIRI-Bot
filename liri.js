@@ -6,7 +6,7 @@ var Twitter = require("twitter");//TWITTER
 var request = require("request");//OMDB
 var Spotify = require("node-spotify-api");//SPOTIFY
 
-//KEYS
+//KEYSgit
 var client = new Twitter(keys.twitterKeys);
 var spotifyClient = new Spotify(keys.spotifyKeys);
 
